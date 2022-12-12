@@ -7,58 +7,53 @@ const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = [
     {
-        type: "input",
-        name: "title",
-        message: "What is the title of your project?",
+        type: 'input',
+        message: 'What is the title of your project?',
+        name: 'title',
     },
     {
-        type: "input",
-        name: "badge",
-        message: "Please provide the badges links that you want"
+        type: 'input',
+        message: 'Enter a description of your project:',
+        name: 'description',
     },
     {
-        type: "input",
-        name: "description",
-        message: "Please provide your project's description"
+        type: 'input',
+        message: 'What is the installation process?',
+        name: 'installation',
     },
     {
-        type: "input",
-        name: "installation",
-        message: "Please provide the installation instructions"
+        type: 'input',
+        message: 'How is your project used?',
+        name: 'usage',
     },
     {
-        type: "input",
-        name: "usage",
-        message: "Please provide the project usage"
+        type: 'list',
+        message: 'What License does your project use?',
+        choices: ['MIT', 'GPLv2', 'Apache', 'Other', 'None'],
+        name: 'license',
     },
     {
-        type: "input",
-        name: "licence",
-        message: "Please provide the project licence or your badge link"
+      type: 'input',
+      message: 'How would someone contribute to your project? If allowed at all.',
+      default: 'N/A',
+      name: 'contribute',
     },
     {
-        type: "input",
-        name: "contributing",
-        message: "Please provide the contributing parties"
+      type: 'input',
+      message: 'How does someone test your project?',
+      default: 'N/A',
+      name: 'test',
     },
     {
-        type: "input",
-        name: "test",
-        message: "Please provide the project tests"
+      type: 'input',
+      message: 'What is your GitHub account?',
+      name: 'github',
     },
     {
-        type: "input",
-        name: "username",
-        message: "What is your github user name?"
-    },
-    {
-        type: "input",
-        name: "repo",
-        message: "What is your repo link?"
-    },
-
-
-
+      type: 'input',
+      message: 'What is a good email for people to send questions to?',
+      name: 'email',
+    }
 ];
 
 // TODO: Create a function to write README file

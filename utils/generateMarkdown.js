@@ -4,7 +4,16 @@ function renderLicenseBadge(license) {}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+
+  // let licenseLink = '';
+  // if(data.license == "none") {
+  //   return licenseLink;
+  // } else {
+  //   licenseLink = 'https://choosealicense.com/licenses/${data.license}/'
+  //   return licenseLink;
+  // }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -14,7 +23,54 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
 
-`;
+  ${data.badge}
+
+## Description
+
+${data.description}
+
+## Table of contents
+- [Description](#Description)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Licence](#Licence)
+- [Contributors](#Contributors)
+- [Test](#Test)
+- [Repository Link](#Repository)
+- [GitHub Info](#GitHub)
+
+## Installation
+
+${data.installation}
+
+
+## Usage
+
+${data.usage}
+
+
+## License
+
+${data.license}
+
+
+## Test
+
+${data.test}
+
+## Repository
+
+- [Project Repo](${data.repo})
+
+## GitHub
+
+![Image of me](${githubInfo.githubImage})
+- ${githubInfo.name}
+- [GitHub Profile](${githubInfo.profile})
+- <${githubInfo.email}>
+  
+  
+  `;
 }
 
 module.exports = generateMarkdown;
