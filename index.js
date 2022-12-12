@@ -29,7 +29,7 @@ const questions = [
     {
         type: 'list',
         message: 'What License does your project use?',
-        choices: ['MIT', 'GPLv2', 'Apache', 'Other', 'None'],
+        choices: ['MIT', 'Apache', 'other', 'none'],
         name: 'license',
     },
     {
@@ -57,10 +57,25 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+
+    fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`,data,(err) => {
+        if(err) {
+            console.log(err);
+        }
+        console.log('Your README has been generated');
+    });
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+
+    inquirer 
+    .prompt(questions)
+    .then((data) =>
+        writeToFile(data.title,generateMarkdown(data))
+    );
+}
 
 // Function call to initialize app
 init();
