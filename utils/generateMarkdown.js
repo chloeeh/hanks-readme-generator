@@ -59,19 +59,19 @@ function generateMarkdown(data) {
   ${myLicenseBadge}
 
 
-## Description
+## <a name="Description"
 
 ${data.description}
 
 ## Table of contents
-- [Description](#Description)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Licence](#Licence)
-- [Contributors](#Contributors)
-- [Test](#Test)
-- [Repository Link](#Repository)
-- [GitHub Info](#GitHub)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Licence](#license)
+- [Contributors](#contributors)
+- [Test](#test)
+- [Repository Link](#repository)
+- [GitHub Info](#gitHub)
 
 ## Installation
 
