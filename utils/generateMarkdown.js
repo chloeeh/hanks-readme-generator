@@ -1,29 +1,58 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+
+  let licenseBadge = '';
+  if(data.license === 'none') {
+    licenseBadge = '';
+    // don't use string literals, because this function will return a string that will be placed
+    // within a string literal in the generateMarkdown() function
+  } else if(data.license === 'MIT') {
+    licenseBadge = '![GitHub ${data.license} License](https://img.shields.io/badge/License-MIT-red.svg)';
+  } else if(data.license === 'GPL') {
+    licenseBadge = '![GitHub ${data.license} License](https://img.shields.io/badge/License-GPL-blue.svg)';
+  } else if(data.license === 'Apache') {
+    licenseBadge = '![GitHub ${data.license} License](https://img.shields.io/badge/License-Apache%202.0-green.svg)';
+  } 
+
+  return licenseBadge;
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
 
-  // let licenseLink = '';
-  // if(data.license == "none") {
-  //   return licenseLink;
-  // } else {
-  //   licenseLink = 'https://choosealicense.com/licenses/${data.license}/'
-  //   return licenseLink;
-  // }
+  let licenseLink = '';
+  if(data.license === "none") {
+    licenseLink = '';
+  } else {
+    // don't use string literals, because this function will return a string that will be placed
+    // within a string literal in the generateMarkdown() function
+    licenseLink = '![Link to the license](https://choosealicense.com/licenses/${data.license}/)';
+  }
+  return licenseLink;
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  let licenseSection = '';
+
+  if(data.license === "none") {
+    licenseSection = '';
+  } else {
+    // don't use string literals, because this function will return a string that will be placed
+    // within a string literal in the generateMarkdown() function
+    licenseSection = '> **Note 1**: This application is covered under the ${data.licese} license';
+  }
+  return licenseSection;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
-  ${data.badge}
+  ${renderLicenseBadge(data.license)}
 
 ## Description
 
@@ -50,8 +79,8 @@ ${data.usage}
 
 
 ## License
-
-${data.license}
+${renderLicenseSection(data.license)}
+${renderLicenseLink(data.license)}
 
 
 ## Test
