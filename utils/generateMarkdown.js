@@ -52,16 +52,10 @@ function generateMarkdown(data) {
   var myLicenseLink = renderLicenseLink(data);
   var myLicenseSection = renderLicenseSection(data);
 
-  // ![license](https://img.shields.io/badge/License-${myLicenseBadge}-red)
 
   return `# ${data.title}
 
   ${myLicenseBadge}
-
-
-## <a name="Description"
-
-${data.description}
 
 ## Table of contents
 - [Description](#description)
@@ -70,8 +64,11 @@ ${data.description}
 - [Licence](#license)
 - [Contributors](#contributors)
 - [Test](#test)
-- [Repository Link](#repository)
-- [GitHub Info](#gitHub)
+- [Questions](#questions)
+
+## Description
+
+${data.description}
 
 ## Installation
 
