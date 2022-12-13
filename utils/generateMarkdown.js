@@ -86,6 +86,10 @@ ${myLicenseSection}
 
 ${myLicenseLink}
 
+## Contributors
+
+${data.contribute}
+
 ## Test
 
 ${data.test}
@@ -100,5 +104,6 @@ https://github.com/${data.github}
   
   `;
 }
-
+// makes this dile a module and can be called in index.js
+// see top portion of index.js to see this module called
 module.exports = generateMarkdown;

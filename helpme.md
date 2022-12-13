@@ -1,6 +1,6 @@
-# This is my title
+# Help Me
 
-  ![License](https://img.shields.io/badge/License-MIT-red)
+  
 
 ## Table of contents
 - [Description](#description)
@@ -13,23 +13,23 @@
 
 ## Description
 
-This is a demo 
+This is an example with no license
 
 ## Installation
 
-No process
+None
 
 
 ## Usage
 
-carefully
+It isn't
 
 
 ## License
 
-> **Note 1**: This application is covered under MIT license
 
-[Link to the license](https://choosealicense.com/licenses/mit/)
+
+
 
 ## Contributors
 
@@ -37,7 +37,7 @@ N/A
 
 ## Test
 
-Follow directions
+N/A
 
 ## Questions?
 
